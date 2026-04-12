@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scan Cup — Cartas del Mundial México 2026</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="logo-icon">⚽</span>
+        <span class="logo-text">SCAN<span class="logo-accent">CUP</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#features">Características</a></li>
+        <li><a href="#how">¿Cómo funciona?</a></li>
+        <li><a href="#collection">Colección</a></li>
+        <li><a href="#download" class="btn btn--nav">Descargar</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ HERO ══════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Left: copy -->
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="badge-dot"></span>
+        Mundial México 2026 — Edición especial
+      </div>
+      <h1 class="hero__title">
+        Arma tu<br />
+        <span class="title-gradient">Equipo Soñado.</span>
+      </h1>
+      <p class="hero__subtitle">
+        Escanea tus cartas físicas del Mundial México 2026, digitaliza tu colección
+        y completa el álbum de los 9 mejores jugadores del torneo.
+      </p>
+      <div class="hero__actions">
+        <a href="https://drive.google.com/uc?export=download&id=19098HOEezCysT3rIIdX9yhbPAKNrmBrc" class="btn btn--download">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Descargar Scan Cup
+        </a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__number">9</span>
+          <span class="stat__label">Cartas exclusivas</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__number">32</span>
+          <span class="stat__label">Selecciones</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__number">2026</span>
+          <span class="stat__label">México</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: App Home Screen mockup (replica fiel del Home.tsx) -->
+    <div class="hero__visual">
+      <div class="phone-mockup">
+        <div class="phone-frame">
+          <div class="phone-screen">
+
+            <!-- Header rojo redondeado abajo (Home.tsx: bg-wc-red rounded-b-[40px]) -->
+            <div class="app-home-header">
+              <div class="app-home-topbar">
+                <div class="app-home-badge">
+                  <span>⚽ WC26</span>
+                </div>
+                <span class="app-home-label">APP OFICIAL</span>
+              </div>
+              <h2 class="app-home-title">Arma tu<br/>Equipo Soñado.</h2>
+
+              <!-- Botón de escaneo teal circular (Home.tsx: bg-wc-green-light rounded-full border-4 border-white) -->
+              <div class="app-scan-wrap">
+                <button class="app-scan-circle">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/>
+                    <rect x="7" y="7" width="10" height="10" rx="1"/>
+                    <rect x="9" y="9" width="6" height="6" rx="0.5" fill="white" stroke="none"/>
+                  </svg>
+                </button>
+                <div class="app-scan-label">ESCANEAR</div>
+              </div>
+            </div>
+
+            <!-- Activity card (Home.tsx: bg-wc-dark-bg) -->
+            <div class="app-activity">
+              <div class="app-activity__label">Cartas Coleccionadas</div>
+              <div class="app-activity__number">3</div>
+              <div class="app-activity__bar">
+                <div class="app-activity__fill" style="width:33%"></div>
+              </div>
+            </div>
+
+            <!-- Mini card grid preview -->
+            <div class="app-mini-grid">
+              <!-- Collected: Messi - legendary -->
+              <div class="app-mini-card app-mini-card--legendary">
+                <div class="app-mini-badge">⭐</div>
+                <div class="app-mini-flag">🇦🇷</div>
+                <div class="app-mini-overlay">
+                  <span class="app-mini-name">Messi</span>
+                  <span class="app-mini-pos">DEL · ARG</span>
+                </div>
+              </div>
+              <!-- Collected: Mbappé - rare -->
+              <div class="app-mini-card app-mini-card--rare">
+                <div class="app-mini-flag">🇫🇷</div>
+                <div class="app-mini-overlay">
+                  <span class="app-mini-name">Mbappé</span>
+                  <span class="app-mini-pos">EXT · FRA</span>
+                </div>
+              </div>
+              <!-- Collected: Modrić - common -->
+              <div class="app-mini-card app-mini-card--common">
+                <div class="app-mini-flag">🇭🇷</div>
+                <div class="app-mini-overlay">
+                  <span class="app-mini-name">Modrić</span>
+                  <span class="app-mini-pos">MC · CRO</span>
+                </div>
+              </div>
+              <!-- Missing card (Falta) -->
+              <div class="app-mini-card app-mini-card--missing">
+                <div class="app-mini-plus">+</div>
+                <div class="app-mini-falta">Falta</div>
+              </div>
+            </div>
+
+            <!-- Red CTA button (Home.tsx: bg-wc-red rounded-xl) -->
+            <div class="app-cta-btn">Ver Mi Colección</div>
+
+          </div>
+        </div>
+        <div class="phone-shadow"></div>
+
+        <!-- Floating cards -->
+        <div class="floating-card fc-1">
+          <div class="fc-badge legendary">⭐ LEYENDA</div>
+          <span>🇦🇷 L. Messi</span>
+        </div>
+        <div class="floating-card fc-2">
+          <div class="fc-badge scan">ESCANEADO</div>
+          <span>✅ +1 carta nueva</span>
+        </div>
+        <div class="floating-card fc-3">
+          <div class="fc-badge special">🇲🇽 ESPECIAL</div>
+          <span>H. Lozano</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span>Descubre más</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════ FEATURES ═══════════════════════════════════ -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Por qué elegir Scan Cup</span>
+        <h2 class="section-title">Todo lo que un coleccionista necesita</h2>
+      </div>
+      <div class="features__grid">
+
+        <div class="feature-card">
+          <div class="feature-icon feature-icon--scan">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/>
+              <rect x="7" y="7" width="10" height="10" rx="1"/>
+            </svg>
+          </div>
+          <h3>Escaneo instantáneo</h3>
+          <p>Apunta la cámara a cualquier carta física y la IA la reconoce en menos de un segundo con precisión del 99%.</p>
+        </div>
+
+        <div class="feature-card feature-card--highlight">
+          <div class="feature-icon feature-icon--album">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <h3>Álbum digital</h3>
+          <p>Organiza tus 9 cartas del Mundial en el álbum digital de la app. Toca cada carta para ver sus estadísticas completas.</p>
+          <span class="feature-badge">Popular</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon feature-icon--mundial">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h3>Edición México 2026</h3>
+          <p>Colección exclusiva del Mundial. Cada carta captura la esencia de los mejores jugadores de este torneo histórico.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon feature-icon--stats">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3>Estadísticas del jugador</h3>
+          <p>Toca cualquier carta para ver su ritmo, tiro, pase, regate, defensa y físico. Conoce a fondo a cada estrella.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon feature-icon--rare">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3>Rareza de cartas</h3>
+          <p>Descubre si tu carta es Común, Rara o Legendaria al escanearla. Las legendarias son las más difíciles de conseguir.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon feature-icon--notify">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+          </div>
+          <h3>Alertas de escaneo</h3>
+          <p>Recibe notificaciones cada vez que escanees una carta nueva. Lleva el control de tu progreso hacia el álbum completo.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ HOW IT WORKS ══════════════════════════════════ -->
+  <section class="how" id="how">
+    <div class="how__bg"><div class="how__glow"></div></div>
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-eyebrow">Simple y rápido</span>
+        <h2 class="section-title">¿Cómo funciona?</h2>
+        <p class="section-subtitle">En tres pasos tendrás tu colección completa en el bolsillo</p>
+      </div>
+      <div class="how__steps">
+
+        <div class="step">
+          <div class="step__number">01</div>
+          <div class="step__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+          </div>
+          <h3>Descarga la app</h3>
+          <p>Descarga Scan Cup gratis. Compatible con Android e iOS.</p>
+        </div>
+
+        <div class="step__connector">
+          <svg width="60" height="20" viewBox="0 0 60 20">
+            <path d="M0 10 Q30 0 60 10" stroke="url(#gc1)" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+            <defs>
+              <linearGradient id="gc1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#008751"/>
+                <stop offset="100%" style="stop-color:#E63946"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="step">
+          <div class="step__number">02</div>
+          <div class="step__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </div>
+          <h3>Escanea tus cartas</h3>
+          <p>Abre el escáner y apunta a tu carta física. La IA detecta el jugador en menos de un segundo.</p>
+        </div>
+
+        <div class="step__connector">
+          <svg width="60" height="20" viewBox="0 0 60 20">
+            <path d="M0 10 Q30 0 60 10" stroke="url(#gc2)" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+            <defs>
+              <linearGradient id="gc2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#E63946"/>
+                <stop offset="100%" style="stop-color:#008751"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="step">
+          <div class="step__number">03</div>
+          <div class="step__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18M9 21V9"/>
+            </svg>
+          </div>
+          <h3>¡Completa tu álbum!</h3>
+          <p>Reúne las 9 cartas exclusivas y visualiza tu álbum digital del Mundial completo.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════ COLLECTION ═════════════════════════════════ -->
+  <!-- Réplica fiel de UserCollection.tsx -->
+  <section class="collection" id="collection">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-eyebrow">9 cartas exclusivas · México 2026</span>
+        <h2 class="section-title">Así se ve tu colección en la app</h2>
+        <p class="section-subtitle">Así se verán tus cartas una vez escaneadas</p>
+      </div>
+
+      <!-- App collection frame (replica de UserCollection.tsx) -->
+      <div class="app-frame">
+
+        <!-- Header de la pantalla (UserCollection: justify-between items-center) -->
+        <div class="app-frame__header">
+          <h3 class="app-frame__title">Mi Colección</h3>
+          <button class="app-frame__search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Barra de progreso (UserCollection: PROGRESO TOTAL) -->
+        <div class="app-frame__progress">
+          <div class="app-progress-labels">
+            <span>PROGRESO TOTAL</span>
+            <span class="progress-count">3/9 (33%)</span>
+          </div>
+          <div class="app-progress-track">
+            <div class="app-progress-fill" style="width:33%"></div>
+          </div>
+        </div>
+
+        <!-- Grid de cartas 4 columnas (UserCollection: grid grid-cols-4 gap-4) -->
+        <div class="app-cards-grid">
+
+          <!-- ✅ Carta 1: Messi — LEGENDARIA (collected) -->
+          <div class="app-card app-card--legendary">
+            <div class="app-card__img-wrap">
+              <div class="app-card__flag">🇦🇷</div>
+              <div class="app-card__badge legendary">⭐ LEYENDA</div>
+              <div class="app-card__overlay">
+                <div class="app-card__name">Lionel Messi</div>
+                <div class="app-card__sub">DEL • Argentina</div>
+              </div>
+              <div class="app-card__hover-eye">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- ✅ Carta 2: Mbappé — RARA (collected) -->
+          <div class="app-card app-card--rare">
+            <div class="app-card__img-wrap">
+              <div class="app-card__flag">🇫🇷</div>
+              <div class="app-card__overlay">
+                <div class="app-card__name">K. Mbappé</div>
+                <div class="app-card__sub">EXT • Francia</div>
+              </div>
+              <div class="app-card__hover-eye">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- ✅ Carta 3: Modrić — COMÚN (collected) -->
+          <div class="app-card app-card--common">
+            <div class="app-card__img-wrap">
+              <div class="app-card__flag">🇭🇷</div>
+              <div class="app-card__overlay">
+                <div class="app-card__name">L. Modrić</div>
+                <div class="app-card__sub">MC • Croacia</div>
+              </div>
+              <div class="app-card__hover-eye">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- ❌ Carta 4: Ronaldo — FALTA -->
+          <div class="app-card app-card--missing">
+            <div class="app-card__missing-inner">
+              <div class="app-card__plus-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+              </div>
+              <div class="app-card__falta">Falta</div>
+            </div>
+          </div>
+
+          <!-- ❌ Carta 5: Vinicius — FALTA -->
+          <div class="app-card app-card--missing">
+            <div class="app-card__missing-inner">
+              <div class="app-card__plus-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+              </div>
+              <div class="app-card__falta">Falta</div>
+            </div>
+          </div>
+
+          <!-- ❌ Carta 6: Haaland — FALTA -->
+          <div class="app-card app-card--missing">
+            <div class="app-card__missing-inner">
+              <div class="app-card__plus-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+              </div>
+              <div class="app-card__falta">Falta</div>
+            </div>
+          </div>
+
+          <!-- ❌ Carta 7: Bellingham — FALTA -->
+          <div class="app-card app-card--missing">
+            <div class="app-card__missing-inner">
+              <div class="app-card__plus-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+              </div>
+              <div class="app-card__falta">Falta</div>
+            </div>
+          </div>
+
+          <!-- ❌ Carta 8: Lozano — FALTA -->
+          <div class="app-card app-card--missing">
+            <div class="app-card__missing-inner">
+              <div class="app-card__plus-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+              </div>
+              <div class="app-card__falta">Falta</div>
+            </div>
+          </div>
+
+          <!-- ❌ Carta 9: Lewandowski — FALTA -->
+          <div class="app-card app-card--missing">
+            <div class="app-card__missing-inner">
+              <div class="app-card__plus-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+              </div>
+              <div class="app-card__falta">Falta</div>
+            </div>
+          </div>
+
+        </div><!-- /app-cards-grid -->
+
+        <!-- Stats panel flotante (replica de CardStats.tsx: bg-wc-green) -->
+        <div class="cardstats-panel">
+          <div class="cardstats-panel__header">
+            <div class="cardstats-country-box">
+              <span>🏆</span>
+              <span class="cardstats-country">Argentina</span>
+            </div>
+            <div class="cardstats-rarity-badge legendary">⭐ LEYENDA</div>
+          </div>
+          <div class="cardstats-card-display">
+            <div class="cardstats-card-face">
+              <div class="cardstats-card-flag">🇦🇷</div>
+              <div class="cardstats-card-name-overlay">
+                <h4>Lionel Messi</h4>
+                <p>DEL</p>
+              </div>
+            </div>
+          </div>
+          <div class="cardstats-stats">
+            <div class="cardstats-overall">
+              <span class="cardstats-overall__num">91</span>
+              <div>
+                <div class="cardstats-overall__label">Media General</div>
+                <div class="cardstats-overall__sub">Potencial Alto</div>
+              </div>
+            </div>
+            <div class="cardstats-bars">
+              <div class="stat-bar"><span>Ritmo</span><div class="stat-bar__track"><div class="stat-bar__fill" style="width:85%"></div></div><span>85</span></div>
+              <div class="stat-bar"><span>Tiro</span><div class="stat-bar__track"><div class="stat-bar__fill" style="width:96%"></div></div><span>96</span></div>
+              <div class="stat-bar"><span>Pase</span><div class="stat-bar__track"><div class="stat-bar__fill" style="width:91%"></div></div><span>91</span></div>
+              <div class="stat-bar"><span>Regate</span><div class="stat-bar__track"><div class="stat-bar__fill" style="width:99%"></div></div><span>99</span></div>
+              <div class="stat-bar"><span>Defensa</span><div class="stat-bar__track"><div class="stat-bar__fill" style="width:40%"></div></div><span>40</span></div>
+              <div class="stat-bar"><span>Físico</span><div class="stat-bar__track"><div class="stat-bar__fill" style="width:80%"></div></div><span>80</span></div>
+            </div>
+          </div>
+          <div class="cardstats-panel__footer">
+            <div class="cardstats-media-btn">
+              <span class="media-num">91</span>
+              <span class="media-label">Media</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /app-frame -->
+
+      <div class="collection__cta">
+        <p>¿Puedes completar las 9 cartas del Mundial México 2026?</p>
+        <a href="https://drive.google.com/uc?export=download&id=19098HOEezCysT3rIIdX9yhbPAKNrmBrc" class="btn btn--primary">Descargar y coleccionar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ TESTIMONIALS ══════════════════════════════════ -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-eyebrow">Lo que dicen los fans</span>
+        <h2 class="section-title">Coleccionistas de todo el mundo ya usan Scan Cup</h2>
+      </div>
+      <div class="testimonials__grid">
+
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <p>"¡Increíble! Escaneé mis cartas del Mundial en segundos. La app reconoce cada carta perfectamente y el álbum digital se ve espectacular."</p>
+          <div class="testimonial__author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <strong>Miguel R.</strong>
+              <span>Guadalajara, México</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial testimonial--featured">
+          <div class="testimonial__stars">★★★★★</div>
+          <p>"La edición México 2026 es única. Conseguí las 9 cartas y el álbum digital se ve increíble. Es la mejor forma de recordar este Mundial tan especial."</p>
+          <div class="testimonial__author">
+            <div class="author-avatar">CL</div>
+            <div>
+              <strong>Carlos L.</strong>
+              <span>Ciudad de México, México</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <p>"La tecnología de escaneo es impresionante. Apuntás la cámara y en un segundo ya tenés la carta en tu álbum digital. ¡Muy recomendable!"</p>
+          <div class="testimonial__author">
+            <div class="author-avatar">AS</div>
+            <div>
+              <strong>Andrés S.</strong>
+              <span>Bogotá, Colombia</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ DOWNLOAD ═════════════════════════════════════ -->
+  <section class="download" id="download">
+    <div class="download__bg"><div class="download__glow"></div></div>
+    <div class="container">
+      <div class="download__inner">
+
+        <div class="download__content">
+          <div class="download__flag">
+            <span class="flag-stripe flag-stripe--green"></span>
+            <span class="flag-stripe flag-stripe--white">🏆</span>
+            <span class="flag-stripe flag-stripe--red"></span>
+          </div>
+          <span class="section-eyebrow">Descarga gratuita</span>
+          <h2 class="download__title">Descarga Scan Cup<br /><span class="title-gradient">¡Es gratis!</span></h2>
+          <p class="download__subtitle">
+            Digitaliza tu colección del Mundial México 2026. Sin costo, sin suscripción.
+            Escanea tus 9 cartas exclusivas y completa el álbum más especial del año.
+          </p>
+          <a href="https://drive.google.com/uc?export=download&id=19098HOEezCysT3rIIdX9yhbPAKNrmBrc" class="btn btn--download">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Descargar Scan Cup
+          </a>
+          <p class="download__compat">Compatible con Android e iOS</p>
+        </div>
+
+        <!-- CardStats replica en el download section -->
+        <div class="download__preview">
+          <div class="dl-cardstats">
+            <div class="dl-cs-top">
+              <div class="dl-cs-country">
+                <span>🏆</span>
+                <span>Argentina</span>
+              </div>
+              <div class="dl-cs-badge">⭐ LEYENDA</div>
+            </div>
+            <div class="dl-cs-card">
+              <div class="dl-cs-flag">🇦🇷</div>
+              <div class="dl-cs-info">
+                <span class="dl-cs-name">Lionel Messi</span>
+                <span class="dl-cs-pos">DEL</span>
+              </div>
+            </div>
+            <div class="dl-cs-bars">
+              <div class="dl-bar"><span>Ritmo</span><div class="dl-bar__t"><div class="dl-bar__f" style="width:85%"></div></div><span>85</span></div>
+              <div class="dl-bar"><span>Tiro</span><div class="dl-bar__t"><div class="dl-bar__f" style="width:96%"></div></div><span>96</span></div>
+              <div class="dl-bar"><span>Pase</span><div class="dl-bar__t"><div class="dl-bar__f" style="width:91%"></div></div><span>91</span></div>
+              <div class="dl-bar"><span>Regate</span><div class="dl-bar__t"><div class="dl-bar__f" style="width:99%"></div></div><span>99</span></div>
+            </div>
+            <div class="dl-cs-footer">
+              <div class="dl-cs-media-btn"><span>91</span><small>Media</small></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ FOOTER ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="logo-icon">⚽</span>
+            <span class="logo-text">SCAN<span class="logo-accent">CUP</span></span>
+          </a>
+          <p>La app de coleccionismo de cartas del Mundial México 2026. Escanea, digitaliza y colecciona.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter / X" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.24 8.24 0 0 0 4.81 1.54V6.77a4.85 4.85 0 0 1-1.04-.08z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Producto</h4>
+          <ul>
+            <li><a href="#features">Características</a></li>
+            <li><a href="#how">Cómo funciona</a></li>
+            <li><a href="#collection">Colección</a></li>
+            <li><a href="#download">Descargar</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="#">Centro de ayuda</a></li>
+            <li><a href="#">Comunidad</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Novedades</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Términos de servicio</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Licencias</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Scan Cup. Todos los derechos reservados.</p>
+        <p>Hecho con ❤️ para el Mundial México 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
